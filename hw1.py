@@ -21,7 +21,6 @@ class Portfolio():
         self.hist.append("Cash withdrawal %s" % amount)
 
     def buyStock(self, amount, name):
-
         buy_price = name.price
         sell_price = random.uniform((0.5 * buy_price), (1.5 * buy_price))
         if amount <= 0 or (self.cash-amount*buy_price) <= 0:
