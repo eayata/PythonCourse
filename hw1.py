@@ -60,9 +60,6 @@ class Portfolio():
             self.cash = self.cash-(amount)
             self.hist.append("Bought %s mutual funds %s" % (amount, name.name))
 
-
-
-
     def sellMutualFund(self, amount,name):
 
         sell_price = random.uniform(0.9, 1.2)
@@ -100,28 +97,15 @@ class MutualFund():
 
     def __str__(self):
         return "\n Cash: %s \n Stock: %s  \n " % (self.name, self.share)
-
+#test
 portfolio = Portfolio()
 portfolio.addCash(500)
-
 s = Stock(20, "HFH")
 portfolio.buyStock(5, s)
 mf1 = MutualFund("BRT")
 mf2 = MutualFund("GHT")
 portfolio.buyMutualFund(10.3, mf1)
 portfolio.buyMutualFund(2, mf2)
-
-
-portfolio.sellMutualFund(10.3, mf1)
-mf2 = MutualFund("GHT")
-
-
-portfolio.sellStock(4, s)
-
-s2 = Stock(20, "MGM")
-portfolio.buyStock(5, s2)
-portfolio.buyStock(7, s2)
-portfolio.sellStock(1, s2)
 print(portfolio)
 portfolio.withdrawCash(10)
 print(portfolio)
